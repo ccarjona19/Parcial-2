@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data</title>
+</head>
+<body>
+	<h1> Data de Vacunacion en Panama</h1>
+	<form action="/data_xml", method="GET">
+
+	<table>
+		<tr>
+			<th>Pais o Area</th>
+			<th>Año</th>
+			<th>Valor</th>
+		</tr>
+		{% for record in data %}
+		<tr>
+			<td>{{ record.Country_or_Area }}</td>
+
+			<td>{{ record.Year }}</td>
+			<td>{{ record.Value }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	</form>
+</body>
+</html>
